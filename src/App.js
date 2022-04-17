@@ -1,10 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar';
+import CartWidget from './components/CartWidget';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
     <>
-      <h1>Hola Mundo usando React!</h1>
+      <NavBar>
+        <CartWidget></CartWidget>
+      </NavBar>
+      <ItemListContainer greeting="Mi primer Componente"></ItemListContainer>
     </>
   );
 }
