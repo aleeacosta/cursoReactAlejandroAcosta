@@ -10,7 +10,7 @@ function App() {
       <NavBar>
         <CartWidget></CartWidget>
       </NavBar>
-      <ItemListContainer greeting="Mi primer Componente"></ItemListContainer>
+      <ItemListContainer greeting="Productos"></ItemListContainer>
     </>
   );
 }
