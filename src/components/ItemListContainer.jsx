@@ -29,7 +29,7 @@ const ItemListContainer = ({greeting}) => {
     <>
       <div className='h-full'>
 
-        <h1 className="text-center text-4xl font-bold pt-10">{greeting}</h1>        
+        <h1 className="text-center text-4xl font-bold pt-10 text-current">{greeting}</h1>        
         
         {        
           products.length ? (
@@ -40,7 +40,7 @@ const ItemListContainer = ({greeting}) => {
           
           ) : ( 
           <div className='h-screen'>
-            <p className='text-center m-7'>Cargando Productos...</p>
+            <p className='text-center m-7 text-current'>Cargando Productos...</p>
           </div>)  
         }
 

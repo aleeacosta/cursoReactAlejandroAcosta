@@ -4,7 +4,7 @@ const Home = ({titulo}) => {
   return (
     <div className='h-screen p-15'>
 
-        <h1 className="text-center text-4xl font-bold pt-10">{titulo}</h1>
+        <h1 className="text-center text-4xl font-bold pt-10 text-current">{titulo}</h1>
         
     </div>
   )
