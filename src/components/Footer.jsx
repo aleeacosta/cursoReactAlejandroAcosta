@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
         <footer className="footer items-center bg-base-100 text-base-content px-32 py-7 mt-5 border-t-4 border-current" data-theme="bumblebee">
-            <div className="items-center grid-flow-col">
+            <div className="items-center grid-flow-col font-medium">
                 <p>Copyright © 2022 - All right reserved</p>
             </div> 
             <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
