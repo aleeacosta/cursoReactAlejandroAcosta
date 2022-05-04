@@ -27,11 +27,24 @@ const ItemListContainer = ({greeting}) => {
 
   return (
     <>
-      <h1 className="text-center text-4xl font-bold pt-10">{greeting}</h1>
-      
-      <div className='flex flex-wrap justify-evenly justify-items-center' style={{margin:'30px'}}>
-        {products.map( products => <ProductCard key={products.id} productsData={products}/> )}
-      </div>
+      <div className='h-full p-5'>
+
+        <h1 className="text-center text-4xl font-bold pt-10">{greeting}</h1>        
+        
+        {        
+          products.length ? (
+        
+          <div className='flex flex-wrap justify-evenly justify-items-center p-5 m-0' style={{margin:'30px'}}>
+            {products.map( products => <ProductCard key={products.id} productsData={products}/> )}
+          </div>
+          
+          ) : ( 
+          <div className='h-screen'>
+            <p className='text-center m-7'>Cargando Productos...</p>
+          </div>)  
+        }
+
+      </div>      
     </>
   )
 }
