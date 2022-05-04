@@ -10,7 +10,7 @@ const ProductCard = ( {productsData} ) => {
             <h2 className="card-title">{productsData.title}</h2>
             <p>{productsData.price}</p>
             <div className="card-actions justify-end">
-            <button className="btn btn-primary my-2"><Link to={`/productos/${productsData.id}`}>Detalles</Link></button>
+            <Link to={`/productos/${productsData.id}`}><button className="btn btn-primary my-2">Detalles</button></Link>
             <button className="btn btn-secondary my-2">Añadir</button>
             </div>
         </div>          
