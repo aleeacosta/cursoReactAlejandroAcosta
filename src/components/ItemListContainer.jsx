@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from "react";
-import { products as productsData } from "../data/products.js";
+import { products as productsData } from "../data/asyncmock.js";
 import ProductCard from "./ProductCard.jsx";
 
 const ItemListContainer = ({greeting}) => {

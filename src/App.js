@@ -7,27 +7,32 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import ItemDetail from './components/ItemDetail';
 import Footer from './components/Footer';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import CartProvider from './context/CartContext';
+import AppContextProvider from './context/AppContext';
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-      
-        <NavBar>
-          <CartWidget></CartWidget>
-        </NavBar>
-
-        <Routes>
+    <><AppContextProvider>
+        <CartProvider>
+          <BrowserRouter>
           
-          <Route path='/' element={<Home titulo="Fine Art Shop"></Home>}/>
-          <Route path='/productos' element={<ItemListContainer greeting="Productos"></ItemListContainer>}/>
-          <Route path='/productos/:productId' element={<ItemDetail></ItemDetail>}/>
+            <NavBar>
+              <CartWidget></CartWidget>
+            </NavBar>
 
-        </Routes>  
+            <Routes>
+              
+              <Route path='/' element={<Home titulo="Fine Art Shop"></Home>}/>
+              <Route path='/productos' element={<ItemListContainer greeting="Productos"></ItemListContainer>}/>
+              <Route path='/productos/:productId' element={<ItemDetailContainer/>}/>
+            </Routes>  
 
-        <Footer></Footer>      
-      
-      </BrowserRouter>
+            <Footer></Footer>      
+          
+          </BrowserRouter>
+        </CartProvider>
+      </AppContextProvider>
     </>
   );
 }
